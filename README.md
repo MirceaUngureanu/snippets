@@ -1,2 +1,2 @@
-# snippets
+# Snippets
 Collection of useful code snippets.
