@@ -4,7 +4,7 @@ import buffer from 'gulp-buffer';
 
 function gtScriptsInlineNavV2() {
   return rollup({
-      'input': `${config.paths.views}/Partials/Components/SiteHeader/NavigationV2JS/Navigation.js`,
+      'input': `path/to/js/entry/point/Navigation.js`,
       'format': 'umd',
       'name': 'NavV2'
     })
@@ -13,5 +13,5 @@ function gtScriptsInlineNavV2() {
     .pipe(babel(BabelConfigV2))
     .pipe(gulpIf(isProd, uglify()))
     .pipe(rename({ extname: '.cshtml', basename: '_SiteHeaderInlineV2' }))
-    .pipe(dest(`${config.paths.views}/Partials/Components/SiteHeader`));
+    .pipe(dest(`/pipe/to/final/destination/of/inline/js`));
 }
